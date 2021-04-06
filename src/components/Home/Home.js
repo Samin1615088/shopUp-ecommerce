@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '../../subcomponents/Card/Card';
 
 const Home = () => {
-    const dummyItemData ={
+    const dummyItemData = {
         imgUrl: 'https://dummyimage.com/900/000/fff&text=900x900',
         name: 'dummyName',
         price: '100'
     }
+
+    const [allProducts, setAllProducts] = useState([]);
+    //get all products from server>>
+    useEffect(() => {
+        fetch(`http://localhost:5050/allproducts`)
+            .then(response => response.json())
+            .then(data => setAllProducts(data))
+            .catch(error => console.log(error))
+    }, []);
+    //get all products from server<<
+    console.log('all products Home*', allProducts);
+
     return (
         <>
             <h1>Home</h1>
             <div className="container">
                 <div className="row">
-                    <Card itemData={dummyItemData}/>
+                    {
+                        allProducts?.map(product => {
+                            console.log(product._id);
+                            return <Card product={product} key={product._id} />
+                        }
+                        )
+                    }
+                    {/* <Card itemData={dummyItemData}/> */}
                 </div>
             </div>
         </>
