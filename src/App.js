@@ -7,7 +7,7 @@ import Header from './components/Header/Header';
 import NoMatch from './components/NoMatch/NoMatch';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -28,13 +28,13 @@ function App() {
           <Route path="/admin">
             <Admin />
           </Route>
-          
+
           <Route path="/login">
             <Login />
           </Route>
-          
+
           <Route path="/checkout">
-            <Checkout/>
+            <Checkout />
           </Route>
 
           <Route exact path="/">

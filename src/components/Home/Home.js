@@ -1,10 +1,18 @@
 import React from 'react';
+import Card from '../../subcomponents/Card/Card';
 
 const Home = () => {
     return (
-        <div>
+        <>
             <h1>Home</h1>
-        </div>
+
+
+            <div className="container">
+                <div className="row">
+                    <Card/>
+                </div>
+            </div>
+        </>
     );
 };
 
