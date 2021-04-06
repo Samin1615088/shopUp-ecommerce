@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <>
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand>Navbar</Navbar.Brand>
+                <Navbar.Brand>ShopUp</Navbar.Brand>
                 <Nav className="ml-auto">
                     <Link className="nav-link mx-md-4" to="/home">Home</Link>
                     <Link className="nav-link mx-md-4" to="/orders">Orders</Link>
