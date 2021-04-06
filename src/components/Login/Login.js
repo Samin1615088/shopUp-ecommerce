@@ -6,6 +6,9 @@ import "firebase/auth";
 import "firebase/firestore";
 import firebaseConfig from '../../firebase.config';
 
+import { FaGoogle } from 'react-icons/fa';
+
+
 const Login = () => {
     //USER CONTEXT data receiving using context>
     const [userStatus, setUserStatus] = useContext(UserContext);
@@ -30,7 +33,7 @@ const Login = () => {
                 currentUserCreated.isLoggedIn = true;
                 currentUserCreated.email = user.email;
                 currentUserCreated.displayName = user.displayName || user.email.split('@')[0];
-                currentUserCreated.profilePicUrl =user.photoURL;
+                currentUserCreated.profilePicUrl = user.photoURL;
                 setUserStatus(currentUserCreated);
                 console.log('UserStatusContext in login', userStatus);
             }).catch((error) => {
@@ -43,7 +46,7 @@ const Login = () => {
 
     return (
         <div className="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center">
-            <button type="button" class="btn btn-outline-info w-50" onClick={handleGoogleSign}>SIGN IN WITH GOOGLE</button>
+            <button type="button" className="btn btn-outline-info w-25 rounded-pill" onClick={handleGoogleSign}><FaGoogle/> SIGNING WITH GOOGLE</button>
         </div>
     );
 };
