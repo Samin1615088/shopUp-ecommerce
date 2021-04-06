@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const Header = () => {
     return (
@@ -17,7 +18,7 @@ const Header = () => {
                     </li>
                 </ul>
                 <Link to="/login">
-                <button>Login</button>
+                <Button>Login</Button>
                 </Link>
             </nav>
         </>

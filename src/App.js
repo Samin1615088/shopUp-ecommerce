@@ -5,6 +5,8 @@ import Checkout from './components/Checkout/Checkout';
 import Orders from './components/Orders/Orders';
 import Header from './components/Header/Header';
 import NoMatch from './components/NoMatch/NoMatch';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
