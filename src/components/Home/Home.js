@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
+
 import Card from '../../subcomponents/Card/Card';
 
 const Home = () => {
-    const dummyItemData = {
-        imgUrl: 'https://dummyimage.com/900/000/fff&text=900x900',
-        name: 'dummyName',
-        price: '100'
-    }
-
     const [allProducts, setAllProducts] = useState([]);
+
+
     //get all products from server>>
     useEffect(() => {
         fetch(`http://localhost:5050/allproducts`)
@@ -26,7 +23,6 @@ const Home = () => {
                 <div className="row">
                     {
                         allProducts?.map(product => {
-                            console.log(product._id);
                             return <Card product={product} key={product._id} />
                         }
                         )
