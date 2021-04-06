@@ -9,6 +9,7 @@ import NoMatch from './components/NoMatch/NoMatch';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createContext, useState } from 'react';
+import PrivateRoute from './subcomponents/PrivateRoute/PrivateRoute';
 
 
 //user login related CONTEXT>
@@ -39,21 +40,21 @@ function App() {
               <Home />
             </Route>
 
-            <Route path="/orders">
+            <PrivateRoute path="/orders">
               <Orders />
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/admin">
+            <PrivateRoute path="/admin">
               <Admin />
-            </Route>
+            </PrivateRoute>
 
             <Route path="/login">
               <Login />
             </Route>
 
-            <Route path="/checkout">
+            <PrivateRoute path="/checkout">
               <Checkout />
-            </Route>
+            </PrivateRoute>
 
             <Route exact path="/">
               <Home />

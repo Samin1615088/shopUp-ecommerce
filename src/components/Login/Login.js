@@ -7,6 +7,7 @@ import "firebase/firestore";
 import firebaseConfig from '../../firebase.config';
 
 import { FaGoogle } from 'react-icons/fa';
+import { useHistory, useLocation } from 'react-router';
 
 
 const Login = () => {
@@ -14,7 +15,12 @@ const Login = () => {
     const [userStatus, setUserStatus] = useContext(UserContext);
     //USER CONTEXT data receiving using context<
 
-
+    //private router redirect>
+    const history = useHistory();
+    const location = useLocation();
+    let { from } = location.state || { from: { pathname: "/" } };
+    console.log('location ', { from });
+    //private router redirect<
 
     //firebase SignIn By Google>> >>
     // Initialize Firebase>
@@ -35,7 +41,7 @@ const Login = () => {
                 currentUserCreated.displayName = user.displayName || user.email.split('@')[0];
                 currentUserCreated.profilePicUrl = user.photoURL;
                 setUserStatus(currentUserCreated);
-                console.log('UserStatusContext in login', userStatus);
+                history.replace(from);
             }).catch((error) => {
                 console.log(error.message);
             });
@@ -46,7 +52,7 @@ const Login = () => {
 
     return (
         <div className="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center">
-            <button type="button" className="btn btn-outline-info w-25 rounded-pill" onClick={handleGoogleSign}><FaGoogle/> SIGNING WITH GOOGLE</button>
+            <button type="button" className="btn btn-outline-info w-25 rounded-pill" onClick={handleGoogleSign}><FaGoogle /> SIGNING WITH GOOGLE</button>
         </div>
     );
 };
