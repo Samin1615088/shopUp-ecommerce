@@ -31,7 +31,7 @@ const Header = () => {
                             </div>
                         )
                         :
-                        (<Link className="ml-md-4 btn btn-outline-info" to="/login">Login</Link>)
+                        (<Link className="ml-md-4 btn btn-outline-success" to="/login">Login</Link>)
                 }
             </Navbar>
         </>

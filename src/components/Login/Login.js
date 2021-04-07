@@ -52,7 +52,7 @@ const Login = () => {
 
     return (
         <div className="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center">
-            <button type="button" className="btn btn-outline-info w-25 rounded-pill" onClick={handleGoogleSign}><FaGoogle /> SIGNING WITH GOOGLE</button>
+            <button type="button" className="btn btn-outline-success w-25 rounded-pill" onClick={handleGoogleSign}><FaGoogle /> SIGNING WITH GOOGLE</button>
         </div>
     );
 };
