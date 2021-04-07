@@ -14,7 +14,7 @@ const Home = () => {
             .catch(error => console.log(error))
     }, []);
     //get all products from server<<
-    console.log('all products Home*', allProducts);
+    // console.log('all products Home*', allProducts);
 
     return (
         <>
@@ -26,7 +26,6 @@ const Home = () => {
                         }
                         )
                     }
-                    {/* <Card itemData={dummyItemData}/> */}
                 </div>
             </div>
         </>

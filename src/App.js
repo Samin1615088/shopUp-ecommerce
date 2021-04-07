@@ -52,7 +52,7 @@ function App() {
               <Login />
             </Route>
 
-            <PrivateRoute path="/checkout">
+            <PrivateRoute path="/checkout/:id">
               <Checkout />
             </PrivateRoute>
 
