@@ -40,21 +40,22 @@ function App() {
               <Home />
             </Route>
 
-            <PrivateRoute path="/orders">
+            <Route path="/orders">
               <Orders />
-            </PrivateRoute>
+            </Route>
 
-            <PrivateRoute path="/admin">
+            {/* <Route path="/admin">
               <Admin />
-            </PrivateRoute>
+            </Route> */}
+            
 
             <Route path="/login">
               <Login />
             </Route>
 
-            <PrivateRoute path="/checkout">
+            <Route path="/checkout">
               <Checkout />
-            </PrivateRoute>
+            </Route>
 
             <Route exact path="/">
               <Home />
