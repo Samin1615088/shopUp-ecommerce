@@ -6,7 +6,7 @@ const Products = () => {
     const [allProducts, setAllProducts] = useState([]);
     const [reloadToggle, setReloadToggle] = useState(false);
     useEffect(() => {
-        fetch(`http://localhost:5050/allproducts`)
+        fetch(`https://blooming-tundra-01056.herokuapp.com/allproducts`)
             .then(response => response.json())
             .then(data => setAllProducts(data))
             .catch(error => console.log(error))
@@ -16,7 +16,7 @@ const Products = () => {
 
     const handleDelete = (id) => {
         console.log(id, 'clicked');
-        fetch(`http://localhost:5050/deleteProduct/${id}`, {
+        fetch(`https://blooming-tundra-01056.herokuapp.com/deleteProduct/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

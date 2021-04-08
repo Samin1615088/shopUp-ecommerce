@@ -11,7 +11,7 @@ const Orders = () => {
     });
 
     useEffect(() => {
-        fetch(`http://localhost:5050/orders/${userStatus.email}`)
+        fetch(`https://blooming-tundra-01056.herokuapp.com/orders/${userStatus.email}`)
             .then(response => response.json())
             .then(data => setOrderedProduct(data))
     }, []);

@@ -11,7 +11,7 @@ const Checkout = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        axios.get(`http://localhost:5050/product/${id}`)
+        axios.get(`https://blooming-tundra-01056.herokuapp.com/product/${id}`)
             .then(response => {
                 setCart(response.data);
             })
@@ -26,7 +26,7 @@ const Checkout = () => {
         currentCart.orderDate = moment().format('MMMM Do YYYY, h:mm:ss a');
         currentCart.email = userStatus.email;
         console.log(currentCart);
-        axios.post(`http://localhost:5050/placeorder`, currentCart)
+        axios.post(`https://blooming-tundra-01056.herokuapp.com/placeorder`, currentCart)
             .then(response => {
                 console.log(response);
                 document.getElementById('confirm-buy-id').style.display = "none";

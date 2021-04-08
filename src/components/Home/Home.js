@@ -9,7 +9,7 @@ const Home = () => {
 
     //get all products from server>>
     useEffect(() => {
-        fetch(`http://localhost:5050/allproducts`)
+        fetch(`https://blooming-tundra-01056.herokuapp.com/allproducts`)
             .then(response => response.json())
             .then(data => {
                 setAllProducts(data);

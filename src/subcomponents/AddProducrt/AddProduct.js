@@ -19,7 +19,7 @@ const AddProduct = () => {
             price: data.price
         }
 
-        fetch(`http://localhost:5050/addProduct`, {
+        fetch(`https://blooming-tundra-01056.herokuapp.com/addProduct`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(product),
