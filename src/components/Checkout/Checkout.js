@@ -1,12 +1,13 @@
 import axios from 'axios';
 import moment from 'moment';
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
 
 const Checkout = () => {
     const [userStatus, setUserStatus] = useContext(UserContext);
     const [cart, setCart] = useState({});
+    const history = useHistory();
     const { id } = useParams();
 
     useEffect(() => {
@@ -28,6 +29,9 @@ const Checkout = () => {
         axios.post(`http://localhost:5050/placeorder`, currentCart)
             .then(response => {
                 console.log(response);
+                document.getElementById('confirm-buy-id').style.display = "none";
+                history.push('/orders');
+                // alert('Your order has been received');
             })
             .catch(error => {
                 console.log(error);
@@ -64,7 +68,7 @@ const Checkout = () => {
                     </tr>
                 </tfoot>
             </table>
-            <div className="text-center">
+            <div id="confirm-buy-id" className="text-center">
                 <button className="btn btn-info" onClick={handleConfirmBuy}>Confirm Buy</button>
             </div>
         </div>

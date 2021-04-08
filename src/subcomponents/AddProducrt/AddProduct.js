@@ -1,11 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { useHistory } from 'react-router';
 import PulseLoader from "react-spinners/PulseLoader";
 
 const AddProduct = () => {
     const [imageURL, setImageURL] = useState("");
     const [loading, setLoading] = useState(false);
+    const history = useHistory();
+
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
@@ -20,7 +23,10 @@ const AddProduct = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(product),
         })
-            .then(res => console.log('server side res', res));
+            .then(res => {
+                console.log('server side res', res);
+                alert('Product is added');
+            });
     };
     const handleImage = (event) => {
         console.log(event.target.files);
@@ -75,7 +81,7 @@ const AddProduct = () => {
                         <br />
                         {
                             loading &&
-                            <p className="text-muted">loading</p>
+                            <p className="text-muted">wait photo is being uploaded</p>
                         }
                         <PulseLoader loading={loading} color={"#0dcaf0"} size={10} />
                     </label>

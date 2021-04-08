@@ -4,13 +4,30 @@ import Products from '../../subcomponents/Products/Products';
 
 const Admin = () => {
     const [subContent, setSubContent] = useState("addProduct");
+
+    const bgStyle = {
+        backgroundColor: '#70c1b3'
+    }
+    const buttonStyle = {
+        boxSizing: 'border-box',
+        cursor: 'pointer',
+        backgroundColor: '#247BA0',
+        color: '#000000',
+        padding: '10px 0px',
+        textAlign: 'center',
+         margin: "5px 0px"
+    }
+    const textStyle = {
+        color: "#FFFFFF",
+        margin: "0"
+    };
+
     return (
         <div>
-            <div className="row vh-100 bg-light">
-                <div className="col-4 d-flex flex-column justify-content-center align-items-center">
-                    <button className="btn btn-primary" onClick={() => setSubContent('products')}>Manage Products</button>
-                    <br />
-                    <button className="btn btn-primary" onClick={() => setSubContent('addProduct')}>Add Products</button>
+            <div className="row g-0 vh-100 bg-light">
+                <div className="col-4 p-0" style={bgStyle}>
+                    <div className="container-fluid w-100 mt-5" style={buttonStyle} onClick={() => setSubContent('products')}><h5 style={textStyle}>Manage Products</h5></div>
+                    <div className="container-fluid w-100" style={buttonStyle} onClick={() => setSubContent('addProduct')}><h5 style={textStyle}>Add Product</h5></div>
                 </div>
                 <div className="col-8">
                     {
