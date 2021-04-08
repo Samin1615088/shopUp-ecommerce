@@ -5,7 +5,7 @@ import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
 
 const Checkout = () => {
-    const [userStatus, setUserStatus] = useContext(UserContext);
+    const [userStatus] = useContext(UserContext);
     const [cart, setCart] = useState({});
     const history = useHistory();
     const { id } = useParams();
@@ -68,8 +68,8 @@ const Checkout = () => {
                     </tr>
                 </tfoot>
             </table>
-            <div id="confirm-buy-id" className="text-center">
-                <button className="btn btn-info" onClick={handleConfirmBuy}>Confirm Buy</button>
+            <div id="confirm-buy-id" className="d-flex justify-content-end">
+                <button className="btn btn-info w-25" onClick={handleConfirmBuy}>Checkout</button>
             </div>
         </div>
     );

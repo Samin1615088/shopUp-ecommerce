@@ -25,11 +25,11 @@ const Admin = () => {
     return (
         <div>
             <div className="row g-0 vh-100 bg-light">
-                <div className="col-4 p-0" style={bgStyle}>
+                <div className="col-12 col-md-4 p-0" style={bgStyle}>
                     <div className="container-fluid w-100 mt-5" style={buttonStyle} onClick={() => setSubContent('products')}><h5 style={textStyle}>Manage Products</h5></div>
                     <div className="container-fluid w-100" style={buttonStyle} onClick={() => setSubContent('addProduct')}><h5 style={textStyle}>Add Product</h5></div>
                 </div>
-                <div className="col-8">
+                <div className="col-12 col-md-8">
                     {
                         subContent === 'addProduct' ?
                             (<AddProduct />)
