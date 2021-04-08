@@ -6,7 +6,6 @@ const Admin = () => {
     const [subContent, setSubContent] = useState("addProduct");
     return (
         <div>
-            <h1>Admin</h1>
             <div className="row vh-100 bg-light">
                 <div className="col-4 d-flex flex-column justify-content-center align-items-center">
                     <button className="btn btn-primary" onClick={() => setSubContent('products')}>Manage Products</button>

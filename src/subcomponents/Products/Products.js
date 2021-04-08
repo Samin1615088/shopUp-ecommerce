@@ -27,7 +27,7 @@ const Products = () => {
     return (
         <div>
             <div className="container overflow-hidden">
-                <h1>Products with delete button</h1>
+                <h1>ALL PRODUCTS</h1>
                 {
                     allProducts?.map(product => {
                         return <>
