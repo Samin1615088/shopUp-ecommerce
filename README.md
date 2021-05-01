@@ -14,7 +14,7 @@ Frontend github: [Code Link](https://github.com/Samin1615088/shopUp-ecommerce)
 
 Backend github: [Code Link](https://github.com/Samin1615088/shopUp-ecommerce-server)
 
-Demo Heroku [Heroku Link](https://blooming-tundra-01056.herokuapp.com/)
+Backend Live [Heroku Link](https://blooming-tundra-01056.herokuapp.com/)
 
 
 
