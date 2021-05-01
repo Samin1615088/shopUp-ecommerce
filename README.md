@@ -1,6 +1,7 @@
 # ShopUp Online Shopping Website
 This is a ecommerce website where daily groceries can be bought and new products can be enlisted.
 
+
 - Here users can login using Gmail sign-in by firebase auth and can order new products. 
 - All data are stored in MongoDB real-time database and parsed from node.js backend using API calls.
 
