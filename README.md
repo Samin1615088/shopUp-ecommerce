@@ -1,4 +1,8 @@
 # ShopUp Online Shopping Website
+This is a ecommerce website where daily groceries can be bought and new products can be enlisted.
+
+- Here users can login using Gmail sign-in by firebase auth and can order new products. 
+- All data are stored in MongoDB real-time database and parsed from node.js backend using API calls.
 
 - Admin can add or delete products from MongoDb database using the front-end
 - Users can login using their gmail id
@@ -6,33 +10,49 @@
 
 
 
-[LiveSite Link](https://shopup-milestone-10.web.app/)
-<br/>
-[Backend Link](https://blooming-tundra-01056.herokuapp.com/)
+Demo Website [LiveSite Link](https://shopup-milestone-10.web.app/) /
+
+
+Backend github: [Code Link](https://blooming-tundra-01056.herokuapp.com/)
+
+
+Demo Heroku [WebBackend Link](https://blooming-tundra-01056.herokuapp.com/)
 
 
 
-## Technologies Used For (Frontend & Backend)
+## Technologies Used For 
 
-#### `FIREBASE AUTHENTICATION & HOSTING`
+### Frontend
 
-#### `EXPRESS.JS`
+`REACT ROUTER`
 
-#### `NODE.JS`
+`BOOTSTRAP`
 
-#### `MONGODB ATLAS DATABASE`
+`REACT FORM HOOK`
 
-#### `REACT ROUTER`
+`USECONTEXT HOOK`
 
-#### `BOOTSTRAP`
+`USESTATE HOOK`
 
-#### `REACT FORM HOOK`
+`FONT AWESOME`
 
-#### `USECONTEXT HOOK`
 
-#### `USESTATE HOOK`
+###  Backend
 
-#### `FONT AWESOME`
+`EXPRESS.JS`
 
+`NODE.JS`
+
+`MONGODB ATLAS DATABASE`
+
+`BODY-PARSER`
+
+`MONGODB ATLAS DATABASE`
+
+`FIREBASE AUTHENTICATION & HOSTING`
+
+`HEROKU HOSTING`
+
+`FIREBASE HOSTING`
 
 # full-stack-client-Samin1615088
