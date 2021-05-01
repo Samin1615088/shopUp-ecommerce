@@ -12,9 +12,10 @@ This is a ecommerce website where daily groceries can be bought and new products
 
 Demo Website [LiveSite Link](https://shopup-milestone-10.web.app/) 
 
-Backend github: [Code Link](https://blooming-tundra-01056.herokuapp.com/)
+Frontend github: [Code Link](https://github.com/Samin1615088/shopUp-ecommerce)
+Backend github: [Code Link](https://github.com/Samin1615088/shopUp-ecommerce-server)
 
-Demo Heroku [WebBackend Link](https://blooming-tundra-01056.herokuapp.com/)
+Demo Heroku [Heroku Link](https://blooming-tundra-01056.herokuapp.com/)
 
 
 
