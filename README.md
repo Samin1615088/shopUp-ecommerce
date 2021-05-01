@@ -2,9 +2,9 @@
 This is a ecommerce website where daily groceries can be bought and new products can be enlisted.<br/>
 
 
-- Here users can login using Gmail sign-in by firebase auth and can order new products. 
-- All data are stored in MongoDB real-time database and parsed from node.js backend using API calls.
-- Admin can add or delete products from MongoDb database using the front-end.
+- here users can login using Gmail sign-in by firebase auth and can order new products. 
+- all data are stored in MongoDB real-time database and parsed from node.js backend using API calls.
+- admin can add or delete products from MongoDb database using the front-end.
 
 <br/>
 
