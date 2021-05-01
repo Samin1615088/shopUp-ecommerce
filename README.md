@@ -1,4 +1,4 @@
-# ShopUp Online Shopping Website
+# ShopUp E-commerce Website
 This is a ecommerce website where daily groceries can be bought and new products can be enlisted.<br/>
 
 
